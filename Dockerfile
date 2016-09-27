@@ -23,10 +23,7 @@ ENV CQ_VERBOSE    y
 ENV CQ_NOBROWSER  y
 ENV CQ_PORT       4502
 ENV CQ_RUNMODE    "dev,author"
-#ENV CQ_JVM_OPTS "-Xmx2048m -Djava.awt.headless=true -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8002,suspend=n"
 ENV CQ_JVM_OPTS "-server -Xmx1524M -Xms512M"
-
-# TODO: export debug mode as a parameter
 
 # Open ports
 EXPOSE 4502 8002
