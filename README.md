@@ -1,10 +1,11 @@
-# docker-aem
+# Docker-aem
 Everything you need to create AEM Docker containers
+
+# Usage
 
 ## Prerequisites
 1. Docker toolbox is installed
 2. AEM_6.2_Quickstart.jar and license.properties are available in the image build context
-
 ## Build
 ```
 docker build --t <image:tag> .
