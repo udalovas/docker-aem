@@ -2,11 +2,8 @@
 Everything you need to create AEM Docker containers
 
 ## Prerequisites
-- Docker toolbox is installed
-- AEM_6.2_Quickstart.jar
-- license.properties
-
-files available in the image build context
+1. Docker toolbox is installed
+2. AEM_6.2_Quickstart.jar and license.properties are available in the image build context
 
 ## Build
 ```
