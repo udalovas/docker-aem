@@ -1,16 +1,16 @@
 FROM java:8
 
-LABEL AEM_Version="6.2"
-LABEL App_Server="Quickstart built-in Servlet Engine (Jetty 9.2)"
-LABEL Java="Oracle SE 8 JRE 1.8.x (64bit)"
-LABEL OS="Ubuntu (latest)"
+LABEL AEM_Version="6.2" \ 
+      App_Server="Quickstart built-in Servlet Engine (Jetty 9.2)" \ 
+      Java="Oracle SE 8 JRE 1.8.x (64bit)" \ 
+      OS="Ubuntu (latest)"
 
 MAINTAINER Alexey Udalov <al.udalec@gmail.com>
 
 # Load context
 RUN mkdir /opt/aem
-ADD AEM_6.2_Quickstart.jar /opt/aem/AEM_6.2_Quickstart.jar
-ADD license.properties /opt/aem/license.properties
+COPY AEM_6.2_Quickstart.jar /opt/aem/AEM_6.2_Quickstart.jar
+COPY license.properties /opt/aem/license.properties
 
 WORKDIR /opt/aem
 
@@ -26,7 +26,7 @@ ENV CQ_RUNMODE    "dev,author"
 ENV CQ_JVM_OPTS "-server -Xmx1524M -Xms512M"
 
 # Open ports
-EXPOSE 4502 8002
+EXPOSE 4502
 
 # Camera, light, action!
 CMD crx-quickstart/bin/quickstart
